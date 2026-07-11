@@ -7,8 +7,9 @@ trade-offs were deliberate, not oversights.
 
 ### Limited compute — no expensive proprietary models
 
-I did not have budget for paid APIs (OpenAI GPT-4, Anthropic Claude, or the largest NVIDIA
-NIM instances). I relied entirely on:
+I did not have budget for paid proprietary APIs (OpenAI GPT-5, Kimi v2.6, or the largest NVIDIA
+NIM instances). I was, however, able to plan and turn my ideas into a real working project
+by relying on:
 
 - **Open-source models** via the NVIDIA NIM free-tier catalogue (`meta/llama-3.1-8b-instruct`,
   hosted at `integrate.api.nvidia.com`), accessed through their OpenAI-compatible interface.

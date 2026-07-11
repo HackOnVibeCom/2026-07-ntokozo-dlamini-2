@@ -67,12 +67,13 @@ the labels just invite the right reader in.
 
 ## 8. Open-source models are enough for an honest demo
 
-I could not afford paid proprietary APIs (OpenAI GPT-4, Anthropic Claude, the largest NVIDIA
-NIM instances). Zink uses **open-source `meta/llama-3.1-8b-instruct`** via the NVIDIA NIM
-free tier when online, and the deterministic Mock when offline. That combination never
-blocked me. The lesson: **the bottleneck in an agent system is the orchestration, not the
-model.** A well-typed state graph, a usable brief, and a clear results view matter more
-than throwing tokens at a frontier model. Hackathons reward engineering signal over spend.
+I did not have budget for paid proprietary APIs (OpenAI GPT-5, Kimi v2.6, or the largest
+NVIDIA NIM instances), but I was able to plan and put my thoughts into a real, working
+project. Zink uses **open-source `meta/llama-3.1-8b-instruct`** via the NVIDIA NIM free
+tier when online, and the deterministic Mock when offline. That combination never blocked
+me. The lesson: **the bottleneck in an agent system is the orchestration, not the model.**
+A well-typed state graph, a usable brief, and a clear results view matter more than
+throwing tokens at a frontier model. Hackathons reward engineering signal over spend.
 
 ## 9. Git hygiene as authenticity evidence
 
