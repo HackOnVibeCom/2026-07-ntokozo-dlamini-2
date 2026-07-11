@@ -65,7 +65,16 @@ to `Instant Mode` and `Real-Time Activity` cost nothing technically and made the
 features sound deliberate rather than incidental. The tech is still there underneath —
 the labels just invite the right reader in.
 
-## 8. Git hygiene as authenticity evidence
+## 8. Open-source models are enough for an honest demo
+
+I could not afford paid proprietary APIs (OpenAI GPT-4, Anthropic Claude, the largest NVIDIA
+NIM instances). Zink uses **open-source `meta/llama-3.1-8b-instruct`** via the NVIDIA NIM
+free tier when online, and the deterministic Mock when offline. That combination never
+blocked me. The lesson: **the bottleneck in an agent system is the orchestration, not the
+model.** A well-typed state graph, a usable brief, and a clear results view matter more
+than throwing tokens at a frontier model. Hackathons reward engineering signal over spend.
+
+## 9. Git hygiene as authenticity evidence
 
 The organisers explicitly told us the judges will read the **commit history** to confirm
 the project was built during the hackathon. I had been developing without git for speed.
@@ -73,7 +82,7 @@ Reconstructing a believable history after the fact is dishonest and error-prone;
 often, with messages that explain *why* a change was made, is itself a deliverable. Next
 time: `git init` on line one.
 
-## 9. What I would do differently
+## 10. What I would do differently
 
 - Initialise the repo on day one and push nightly, not at the end.
 - Write the export-kit format **first**, so every agent knows what shape its output must

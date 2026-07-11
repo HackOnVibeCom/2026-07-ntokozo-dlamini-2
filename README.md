@@ -32,9 +32,11 @@ API key, no network, no waiting.
   shadcn-style components
 - **lucide-react** icons (MIT)
 - Custom TypeScript orchestrator — no LangGraph, no agent framework
-- LLM provider is pluggable: **NVIDIA NIM** (OpenAI-compatible) when
-  `LLM_API_KEY` is set *and* reachable; otherwise a **deterministic mock
-  provider** (FNV-1a hash + Mulberry32 PRNG) so the demo always runs offline
+- LLM provider is pluggable: **NVIDIA NIM** (OpenAI-compatible) hosting **open-source
+  Meta Llama models** (`meta/llama-3.1-8b-instruct`) when `LLM_API_KEY` is set *and*
+  reachable; otherwise a **deterministic mock provider** (FNV-1a hash + Mulberry32 PRNG)
+  so the demo always runs offline. No proprietary paid APIs were used — see
+  [docs/CONSTRAINTS.md](docs/CONSTRAINTS.md) for the reasoning.
 - **Server-Sent Events** for live agent streaming
 - Zero-dependency JSON store for run state and the trace log
 
@@ -112,4 +114,4 @@ docs/
 
 ## License
 
-MIT.
+MIT — see [LICENSE](LICENSE).
