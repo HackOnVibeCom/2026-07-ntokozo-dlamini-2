@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  background: #fafafa;
+  color: #0a0a0a;
+}
+
+html:not(.dark) body,
+body {
+  background: #fafafa;
+  color: #0a0a0a;
+}
+
+* {
+  box-sizing: border-box;
+}

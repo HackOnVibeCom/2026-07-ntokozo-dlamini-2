@@ -1,0 +1,21 @@
+# dependencies
+node_modules
+
+# build output
+.next
+out
+tsconfig.tsbuildinfo
+
+# runtime data store (regenerated on each run)
+launch_system_data.db
+launch_system_data.db-wal
+launch_system_data.db-shm
+launch_system_data.json
+
+# environment
+.env
+.env.local
+
+# logs & OS
+*.log
+.DS_Store
