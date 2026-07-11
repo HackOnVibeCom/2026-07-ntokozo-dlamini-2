@@ -99,6 +99,9 @@ lib/
   categories.ts  tfidf.ts  evals.ts  attestation.ts  share.ts  utils.ts
 docs/
   adr/                            ADR-001 architecture, ADR-002 LLM provider, ADR-003 persistence
+  LEARNINGS.md                    what I learnt building Zink
+  CONSTRAINTS.md                  limits faced (compute, time, scope cuts)
+  FUTURE.md                       expansion roadmap (Phase A–D)
   SUBMISSION.md                   submission checklist
 ```
 
