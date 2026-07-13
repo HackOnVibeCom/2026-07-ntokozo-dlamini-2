@@ -15,7 +15,7 @@ const Body = z.object({
   storeUrl: z.string().max(200).optional().default(""),
   marketingBudget: z.coerce.number().min(0).max(1_000_000),
   designShare: z.coerce.number().min(0).max(1),
-  forceProvider: z.enum(["cloud", "mock"]).optional(),
+  forceProvider: z.enum(["cloud", "mock", "auto"]).optional().default("auto"),
 });
 
 export async function POST(req: NextRequest) {

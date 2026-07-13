@@ -129,17 +129,20 @@ function buildCloudConfig(): CloudConfig | null {
 
 // Run-start provider selection: cloud if configured AND reachable, else mock.
 // Also supports manual override via `force=cloud|mock` query param for demos.
-export async function selectProvider(force?: "cloud" | "mock"): Promise<ProviderSelection> {
+export async function selectProvider(force?: "cloud" | "mock" | "auto"): Promise<ProviderSelection> {
   if (force === "mock") return { kind: "mock" };
   if (force === "cloud") {
     const cfg = buildCloudConfig();
     if (!cfg) return { kind: "mock" };
-    const provider = new CloudProvider(cfg);
-    const ok = await provider.isReachable().catch(() => false);
-    return ok ? { kind: "cloud", provider } : { kind: "mock" };
+    return await buildAndProbe(cfg);
   }
+  // "auto" or undefined: probe cloud, fall back to mock
   const cfg = buildCloudConfig();
   if (!cfg) return { kind: "mock" };
+  return await buildAndProbe(cfg);
+}
+
+async function buildAndProbe(cfg: CloudConfig): Promise<ProviderSelection> {
   const provider = new CloudProvider(cfg);
   const ok = await provider.isReachable().catch(() => false);
   return ok ? { kind: "cloud", provider } : { kind: "mock" };
