@@ -2,6 +2,8 @@
 
 **HackOnVibe · July 2026** — Theme: *Effective promotion of a newly launched mobile app.*
 
+> **Demo:** [Watch the demo video](demo/hackonvibe_9AWzuZmi.mkv) (37 MB, .mkv with sound)
+
 Zink takes a freshly launched mobile app and autonomously plans, writes,
 designs, and projects a complete, downloadable launch campaign. Five
 specialized agents run through a typed state machine and emit a full launch
